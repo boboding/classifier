@@ -46,11 +46,13 @@ def train(Net,config, logger, train_and_valid_data):
 
             pred_Y = model(_train_X)   
 
-            # print("pred_Y.shape:",pred_Y.shape)
-            # print("_train_Y.shape:",_train_Y.shape)
+            print("pred_Y.shape:",pred_Y.shape)
+            print("_train_Y.shape:",_train_Y.shape)
         
             loss = criterion(pred_Y, _train_Y)  # 计算loss
+            print("loss1:",loss)
             loss.backward()
+            print("loss2:",loss)
 
            
             optimizer.step()            
@@ -67,6 +69,7 @@ def train(Net,config, logger, train_and_valid_data):
 
 
             loss = criterion(pred_Y, _valid_Y)
+            
             valid_loss_array.append(loss.item())
 
         train_loss_cur = np.mean(train_loss_array)

@@ -4,17 +4,10 @@
 author:pumpkin king
 '''
 
-#import pandas as pd
+
 import numpy as np
-#import os
 
-# import time
-# import logging
-# from logging.handlers import RotatingFileHandler
-# import matplotlib.pyplot as plt
-# from sklearn.model_selection import train_test_split
-
-from trainner import train
+from trainer import train
 from evaluator import predict,predict_custom
 from utils import load_logger
 
